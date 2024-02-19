@@ -3,7 +3,7 @@ from typing import Callable
 import re
 
 def generator_numbers(text: str):
-    numbers=map(float,filter(lambda x: re.match(r"\d+[\.,]{0,1}\d+.", x), text.split(" ")))
+    numbers=map(float,filter(lambda x: re.match(r"\d+[\.,]?\d+", x), text.split(" ")))
     for number in numbers:
         yield number
 
